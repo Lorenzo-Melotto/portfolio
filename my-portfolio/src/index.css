@@ -1,0 +1,74 @@
+/* 
+  Palette:
+    - #171717
+    - #444444
+    - #DA0037
+    - #EDEDED
+*/
+
+*{
+  margin: 0;
+  font-family: arial;
+  color: #EDEDED;
+  background-color: #171717;
+}
+
+/* Navbar styles */
+.navbar{
+  background-color: #171717;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+  max-width: 95%;
+  margin: 0 auto;
+  border-bottom: 1px solid #f2f2f2;
+}
+.navbar .links{
+  margin-left: auto;
+}
+.navbar a{
+  text-decoration: none;
+  margin-left: 16px;
+  padding: 6px;
+}
+.navbar a:hover{
+  color: #DA0037;
+}
+
+/* Main content styles */
+.content{
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+/* 404 page styles */
+.not-found h2{
+  font-size: 60px;
+}
+.not-found p{
+  margin: 10px 0px;
+  font-size: 36px;
+}
+
+/* Footer styles */
+footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+footer div{
+  background: #EDEDED;
+}
+
+footer p{
+  color: #171717;
+  padding: 20px;
+  text-align: center;
+}
+
+footer img{
+  vertical-align: middle;
+  width: 30px;
+  height: 30px;
+}
