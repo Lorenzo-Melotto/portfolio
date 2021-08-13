@@ -1,27 +1,30 @@
 /* 
   Palette:
-    - #171717
-    - #444444
-    - #DA0037
-    - #EDEDED
+    - #EEEEEE
+    - #00ADB5
+    - #393E46
+    - #222831
 */
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 *{
   margin: 0;
-  font-family: arial;
-  color: #EDEDED;
-  background-color: #171717;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
 }
 
 /* Navbar styles */
 .navbar{
-  background-color: #171717;
   display: flex;
-  padding: 20px;
+  padding: 20px 100px;
   align-items: center;
-  max-width: 95%;
-  margin: 0 auto;
   border-bottom: 1px solid #f2f2f2;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background-color: #00ADB5;
+  /* color: #222831; */
+  color: #f2f2f2;
 }
 .navbar .links{
   margin-left: auto;
@@ -30,16 +33,130 @@
   text-decoration: none;
   margin-left: 16px;
   padding: 6px;
+  color: #222831;
+}
+.navbar a:visited{
+  /* Don't change color after visited */
+  /* color: #222831; */
+  color: #f2f2f2;
 }
 .navbar a:hover{
-  color: #DA0037;
+  color: #222831;
 }
 
 /* Main content styles */
 .content{
-  max-width: 900px;
-  margin: 40px auto;
+  max-width: 1200px;
+  margin: 20px auto;
+  color: #222831;
+  padding: 10px;
+  min-height: calc(100vh - 70px - 70px);
+}
+.content h1{
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+.content p::selection{
+  background-color: #00ADB5;
+  color: white;
+}
+.content h1::selection{
+  background-color: #00ADB5;
+  color: white;
+}
+.content h2::selection{
+  background-color: #00ADB5;
+  color: white;
+}
+
+/* Contacts page styles */
+.contacts p{
+  margin: 10px 20px;
+}
+.contacts ul{
+  list-style-type: none;
+}
+.contacts .map img{
+  width: 855px;
+  height: 500px;
+}
+.contacts .map{
+  /* min-width: 860px; */
+  display: block;
   padding: 20px;
+  border: 1px solid #00ADB5;
+  border-radius: 5px;
+  box-shadow: 3px 3px #EEE;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+.contacts .email-phone{
+  padding: 20px;
+  border: 1px solid #00ADB5;
+  border-radius: 5px;
+  box-shadow: 3px 3px #EEE;
+  margin-bottom: 15px;
+}
+.contacts a{
+  color:#00ADB5;
+  text-decoration: none;
+}
+.contacts a:hover{
+  text-decoration: underline;
+}
+.contacts a:visited{
+  color: #00ADB5;
+}
+
+.home .link{
+  color: #00ADB5;
+}
+.home .link:hover{
+  text-decoration: underline;
+}
+.home a{
+  text-decoration: none;
+}
+.home p{
+  margin: 10px 0;
+}
+.home ul{
+  list-style-type: none;
+  list-style-position: inside;
+  padding-left: 0;
+}
+.home .repo:hover{
+  box-shadow: 1px 3px 5px rgba(0,0,0,0.5);
+}
+.home .repo{
+  padding: 20px;
+  color: #222831;
+  margin-bottom: 15px;
+  max-width: 900px;
+  margin: 20px auto;
+  text-decoration: none;
+  border: 1px solid #00ADB5;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.home .repo .repo-name{
+  font-size: 28px;
+  color: #00ADB5;
+}
+.home .github-link{
+  font-size: 24px;
+}
+.home .usr-image{
+  width: 300px;
+  height: 300px;
+  border-radius: 100%;
+  vertical-align: middle;
+}
+.home .bio{
+  display: inline;
+  font-size: 28px;
+  margin-left: 20px;
+  font-weight: bold;
 }
 
 /* 404 page styles */
@@ -53,22 +170,124 @@
 
 /* Footer styles */
 footer{
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
-footer div{
-  background: #EDEDED;
-}
-
-footer p{
-  color: #171717;
-  padding: 20px;
+  background: #393E46;
   text-align: center;
+  color: #EEEEEE;
 }
-
+footer p{
+  padding: 20px;
+}
 footer img{
   vertical-align: middle;
   width: 30px;
   height: 30px;
+  margin-left: 5px;
+}
+
+@media screen and (max-width: 1040px){
+  .home .bio{
+    display: block;
+    font-size: 24px;
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 923px){
+  .contacts .map img{
+    width: 800px;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 850px){
+  .contacts .map img{
+    width: 600px;
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 675px){
+  .contacts .map img{
+    width: 400px;
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 475px){
+  .contacts .map img{
+    width: 300px;
+    height: 220px;
+  }
+}
+
+@media screen and (max-width: 450px){
+  .navbar{
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 420px){
+  .home .usr-image{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 370px){
+  .navbar a{
+    position: relative;
+    display: block;
+    margin: 0 0;
+  }
+  footer p{
+    font-size: 14px;
+  }
+  .contacts .map img{
+    width: 270px;
+    height: 200px;
+  }
+}
+
+@media screen and (max-width: 345px){
+  .contacts .map img{
+    width: 230px;
+    height: 160px;
+  }
+}
+
+@media screen and (max-width: 330px){
+  .home .usr-image{
+    width: 250px;
+    height: 250px;
+  }
+  footer p{
+    font-size: 12px;
+  }
+  footer img{
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 310px){
+  .home .repo-name{
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (max-width: 300px){
+  .navbar{
+    padding: 5px;
+  }
+}
+
+@media screen and (max-width: 280px){
+  .home .usr-image{
+    width: 150px;
+    height: 150px;
+  }
+  .contacts .email-phone{
+    font-size: 13px;
+  }
 }

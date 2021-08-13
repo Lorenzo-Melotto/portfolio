@@ -1,4 +1,4 @@
-import ReactLogo from './img/react-icon.png';
+import ReactLogo from './img/logo192.png';
 
 const Footer = () => {
     return (
